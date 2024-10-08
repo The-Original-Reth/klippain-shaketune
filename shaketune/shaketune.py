@@ -60,7 +60,7 @@ class ShakeTune:
         self._printer.register_event_handler('klippy:connect', self._on_klippy_connect)
 
         # Check if Shake&Tune is running in DangerKlipper
-        self.IN_DANGER = importlib.util.find_spec('extras.danger_options') is not None
+        self.IN_DANGER = True
 
         # Register the console print output callback to the corresponding Klipper function
         gcode = self._printer.lookup_object('gcode')
